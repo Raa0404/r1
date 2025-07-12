@@ -48,7 +48,7 @@ export default function Phase1({ onProceed }) {
         </button>
       </div>
 
-      <p className="mt-8 text-xs text-teal-1200 font-bold">© Powered by P.Raa</p>
+      <p className="mt-8 text-xs text-teal-900 font-bold">© Powered by P.Raa</p>
     </div>
   );
 }
