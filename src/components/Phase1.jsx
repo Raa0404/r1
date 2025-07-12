@@ -19,8 +19,8 @@ export default function Phase1({ onProceed }) {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center px-4">
       <div className="bg-white shadow-xl rounded-2xl p-8 w-full max-w-md text-center">
-        <h1 className="text-3xl font-extrabold text-teal-800 mb-2">OTSRegister</h1>
-        <p className="text-sm text-gray-500 mb-6">Recover faster. Report smarter.</p>
+        <h1 className="text-3xl font-extrabold text-teal-900 mb-4">OTS REGISTER</h1>
+        <p className="text-sm text-gray-700 mb-8">Recover faster. Report smarter.</p>
 
         <input
           type="text"
@@ -48,7 +48,7 @@ export default function Phase1({ onProceed }) {
         </button>
       </div>
 
-      <p className="mt-6 text-xs text-teal-900 font-medium">© Powered by P.Raa</p>
+      <p className="mt-8 text-xs text-teal-1200 font-bold">© Powered by P.Raa</p>
     </div>
   );
 }
