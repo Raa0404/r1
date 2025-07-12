@@ -88,7 +88,7 @@ export default function Phase2({ solId, userName, data, onBack, onProceed }) {
           ← Back
         </button>
 
-        <p className="mt-6 text-xs text-gray-600 text-center">© Powered by P.Raa</p>
+        <p className="mt-8 text-xs text-red-1000 text-center">© Powered by P.Raa</p>
       </div>
     </div>
   );
