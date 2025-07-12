@@ -1,0 +1,6 @@
+
+/* Tailwind is loaded via CDN. This file is optional for additional global styles. */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
