@@ -105,7 +105,7 @@ export default function Phase3({ solId, userName, accountData, onBack }) {
           ← Back
         </button>
 
-        <p className="mt-6 text-xs text-orange-800 text-center">© Powered by P.Raa</p>
+        <p className="mt-8 text-xs text-orange-1200 text-center">© Powered by P.Raa</p>
       </div>
     </div>
   );
