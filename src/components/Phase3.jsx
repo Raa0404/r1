@@ -15,37 +15,36 @@ export default function Phase3({ solId, userName, accountData, onBack }) {
     }
 
     const payload = accountData.map((acc) => ({
-      "SOL ID": solId,
-      "User Name": userName,
-      "Account No": acc["Account No"],
-      "Borrower Name": acc["Borrower Name"],
-      "CIF ID": acc["CIF ID"],
-      "Current O/S": acc["Current O/S"],
-      "Principal O/S": acc["Principal O/S"],
-      "NPA Date": acc["NPA Date"],
-      "OTS Date": otsDate,
-      "Compromise Amount": compAmount,
-      "Token Money": token,
-      "Scheme": scheme
-    }));
+  "SOL ID": solId,
+  "User Name": userName,
+  "Account No": acc["Account No"],
+  "Borrower Name": acc["Borrower Name"],
+  "CIF ID": acc["CIF ID"],
+  "Current O/S": acc["Current O/S"],
+  "Principal O/S": acc["Principal O/S"],
+  "NPA Date": acc["NPA Date"],
+  "OTS Date": otsDate,
+  "Compromise Amount": compAmount,
+  "Token Money": token,
+  "Scheme": scheme
+}));
 
-    try {
-      for (const row of payload) {
-        await axios.post(
-          "https://api.sheetbest.com/sheets/11bd0342-8db4-4c75-beb0-3d7bb965769f",
-          row
-        );
-      }
-      setStatus("✅ Details submitted successfully!");
-
-      setTimeout(() => {
-        setStatus("");
-        onBack(); // Return to Phase 2
-      }, 2000);
-    } catch (err) {
-      console.error(err);
-      setStatus("❌ Submission failed. Try again.");
-    }
+try {
+  for (const row of payload) {
+    await axios.post(
+      "https://api.sheetbest.com/sheets/11bd0342-8db4-4c75-beb0-3d7bb965769f",
+      row
+    );
+  }
+  setStatus("✅ Details submitted successfully!");
+  setTimeout(() => {
+    setStatus("");
+    onBack(); // return to Phase 2
+  }, 2000);
+} catch (err) {
+  console.error(err);
+  setStatus("❌ Submission failed. Try again.");
+}
   };
 
   return (
