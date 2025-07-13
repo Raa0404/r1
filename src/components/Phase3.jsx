@@ -14,7 +14,9 @@ export default function Phase3({ solId, userName, accountData, onBack }) {
     if (!otsDate || !compAmount || !token) {
       return setStatus("❌ Please fill all fields.");
     }
-
+const numAccounts = accountData.length;
+const dividedCompAmount = (parseFloat(compAmount) / numAccounts).toFixed(2);
+const dividedToken = (parseFloat(token) / numAccounts).toFixed(2);
     const payload = accountData.map((acc) => ({
   "SOL ID": solId,
   "User Name": userName,
@@ -25,11 +27,10 @@ export default function Phase3({ solId, userName, accountData, onBack }) {
   "Principal O/S": acc["Principal O/S"],
   "NPA Date": acc["NPA Date"],
   "OTS Date": otsDate,
-  "Compromise Amount": compAmount,
-  "Token Money": token,
+  "Compromise Amount": dividedCompAmount,
+  "Token Money": dividedToken,
   "Scheme": scheme
 }));
-
 try {
   for (const row of payload) {
     await axios.post(
