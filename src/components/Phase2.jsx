@@ -7,7 +7,9 @@ export default function Phase2({ solId, userName, data, onBack, onProceed }) {
   const [error, setError] = useState("");
 
   const handleSearch = () => {
-    const found = data.find(acc => acc["Account No"] === inputAcc);
+    const found = data.find(acc =>
+  acc["Account No"].toString().trim() === inputAcc.trim()
+);
     if (!found) return setError("Account not found.");
 
     const sameCIF = data.filter(acc => acc["CIF ID"] === found["CIF ID"]);
