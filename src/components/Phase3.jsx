@@ -8,6 +8,7 @@ export default function Phase3({ solId, userName, accountData, onBack }) {
   const [token, setToken] = useState("");
   const [scheme, setScheme] = useState("Branch Power");
   const [status, setStatus] = useState("");
+  const [showToast, setShowToast] = useState(false);
 
   const handleSubmit = async () => {
     if (!otsDate || !compAmount || !token) {
@@ -37,10 +38,14 @@ try {
     );
   }
   setStatus("✅ Details submitted successfully!");
-  setTimeout(() => {
-    setStatus("");
-    onBack(); // return to Phase 2
-  }, 2000);
+setShowToast(true);
+
+setTimeout(() => {
+  setShowToast(false);
+  setStatus("");
+  onBack(); // return to Phase 2
+}, 2000);
+
 } catch (err) {
   console.error(err);
   setStatus("❌ Submission failed. Try again.");
@@ -105,6 +110,12 @@ try {
         </button>
 
         <p className="mt-8 text-xs text-orange-900 text-center">© Powered by P.Raa</p>
+    {showToast && (
+  <div className="fixed bottom-6 right-6 bg-green-600 text-white px-4 py-2 rounded shadow-lg animate-bounce">
+    ✅ Submitted to Register!
+  </div>
+)}
+
       </div>
     </div>
   );
