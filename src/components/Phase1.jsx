@@ -47,7 +47,9 @@ export default function Phase1({ onProceed }) {
           Proceed
         </button>
       </div>
-
+      <p className="text-center text-sm text-blue-600 font-semibold mt-4">
+      📞 Need help? Call us at: <a href="tel:+917217038759" className="underline">+91-97217038759</a>
+    </p>
       <p className="mt-8 text-xs text-teal-900 font-bold">© Powered by P.Raa</p>
     </div>
   );
