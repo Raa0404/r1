@@ -90,7 +90,7 @@ export default function Phase2({ solId, userName, data, onBack, onProceed }) {
           ← Back
         </button>
 <p className="text-center text-sm text-blue-600 font-semibold mt-4">
-      📞 Need help? Call us at: <a href="tel:+917217038759" className="underline">+91-97217038759</a>
+      📞 Need help? Call us at: <a href="tel:+917217038759" className="underline">+91-7217038759</a>
     </p>
         <p className="mt-8 text-xs text-red-900 text-center">© Powered by P.Raa</p>
       </div>
